@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: lightgray;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Reduced gap between columns */
+            width: 100%;
+            margin: 0 auto;
+            height: 25%; /* Set height for column */
+        }
+
+        /* Style for Rows */
+        .row {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 10px; /* Reduced gap between images and text */
+            border: 1px solid #ddd;
+            padding: 15px; /* Reduced padding */
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 10px auto; /* Added margin to avoid excessive spacing */
+            height: 270px; /* Adjusted height for row */
+        }
+        /* Style for Images in Rows */
+        .row img {
+            width: 200px;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+       
+        /* Style for Text in Rows */
+.text-content {
+    flex: 1;
+    padding-left: 15px;
+    text-align: left; /* Align text to the left */
+    color: black; /* Ensure text is black */
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Header with responsive image and navigation -->
+    <header class="flex-header">
+        <img src="header.jpg" alt="Header Image" class="responsive">
+        <div class="logo">The Cozy Corner Furniture Store</div>
+        <div class="text-overlay">Fall Into Motion
+            <br>
+            <div class="hyperlink"><a href="#">Start Browsing</a></div>
+        </div>
+        <nav class="menu">
+            <ul class="menu-list">
+                <li class="menu-item"><a href="Home.html">Home</a></li>
+                <li class="menu-item"><a href="product-details.html">Product-Details</a></li>
+                <li class="menu-item"><a href="Product.html">Shop</a></li>
+                <li class="menu-item"><a href="Quality.html">Quality</a></li>
+                <li class="menu-item"><a href="Service.html">Services</a></li>
+                <li class="menu-item"><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="flex-main">
+        <article class="flex-article">
+            <h1>Quality</h1>
+
+            <!-- Column 1: Comfort -->
+            <div class="column">
+                <h2>Comfort</h2>
+                <div class="row">
+                    <img src="Quality1.webp" alt="Comfort Image 1">
+                    <img src="Quality2.webp" alt="Comfort Image 2">
+                    <div class="text-content">
+                        <p style="text-align: left;">
+                            Since 2021, ball fiber and feather blend fill is used on all toss pillows and new stationary series, improving durability and resilience when compared with regular polyester fiber fill.
+                        </p>
+                        <p style="text-align: left;">
+                            The feather blends we use in our back and seat cushions are sterilized through triple-washing, making them certified hypoallergenic.
+                        </p>
+                        <p style="text-align: left;">
+                            Seating suspension systems are designed to distribute weight evenly and work in conjunction with high density, high resiliency foam cushioning for maximum comfort without compromising support.
+                        </p>
+                        <p style="text-align: left;">
+                            Specific to each style, cushions are made with the ideal combination of CertiPUR-US® foam and other materials, creating an enhanced seating experience.
+                        </p>
+                        <p style="text-align: left;">
+                            Mixed wood frames have the ideal balance of rigidity and flexibility, providing ultimate support with a 10-year warranty.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: Curated Covers -->
+            <div class="column">
+                <h2>Curated Covers</h2>
+                <div class="row">
+                    <img src="Quality3.webp" alt="Curated Covers Image">
+                    <div class="text-content">
+                        <p style="text-align: left;">
+                            A complete cover assortment is curated to offer a range of color, grade, texture, and pattern to suit each unique customer.
+                        </p>
+                        <p style="text-align:left;">
+                            All our leather is top grain, aniline dyed, and ethically sourced.
+                        </p>
+                        <p style="text-align: left;">
+                            Staffed by a team of experts with extensive tannery experience, our in-house leather lab tests for light fastness, strength, color, and thickness ensuring quality and longevity.
+                        </p>
+                        <p style="text-align: left;">
+                            We offer a selection of Performance fabrics which repel liquids, are easy to clean, and are sure to endure whatever life may throw their way.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3: People -->
+            <div class="column">
+                <h2>People</h2>
+                <div class="row">
+                    <img src="Quality4.jpg" alt="People Image 1">
+                    <img src="Quality5.webp" alt="People Image 2">
+                    <div class="text-content">
+                        <p style="text-align: left;">
+                            We value the artistry of our craft and are committed to investing in continuous training and an expansive certification process for our staff.
+                        </p>
+                        <p style="text-align: left;">
+                            The average tenure for our employees is over 10 years, with some having built careers spanning over 40 years.
+                        </p>
+                        <p style="text-align: left;">
+                            Ingenuity often extends from diversity, and with 60 cultures and 40 languages represented among our employees, we are proud of our culture.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 4: Efficiency -->
+            <div class="column">
+                <h2>Efficiency</h2>
+                <div class="row">
+                    <img src="Quality6.webp" alt="Efficiency Image 1">
+                    <img src="Quality7.webp" alt="Efficiency Image 2">
+                    <div class="text-content">
+                        <p style="text-align: left;">
+                            Integrating trained specialists and artificial intelligence, we optimize yields from leather hides and sheet stock, reducing cost and waste, leading to a more sustainable practice.
+                        </p>
+                        <p style="text-align: left;">
+                            Streamlining our supply chain and optimizing inventory levels helps us reduce lead times, improve our flexibility, and overall efficiency, ensuring you receive your product as quickly as possible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer with social icons and copyright -->
+    <footer class="footer">
+        <div class="footer-social">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="insta.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com"">
+                <img src="linkedin.png" alt="linkedin">
+            </a>
+            <a href="https://www.youtube.com"">
+                <img src="yiutube.png" alt="Youtube">
+            </a>
+            <a href="mailto:dhaliwalraman06@outlook.com">
+                <img src="email.png" alt="Email">
+            </a>
+        </div>
+        <p class="footer-copyright">
+            Copyright© 2024 The Cozy Corner Furniture. All Rights Reserved.   
+
+Terms & Conditions
+
+Privacy Policy
+        </p>
+    </footer>
+</body>
+
+</html>

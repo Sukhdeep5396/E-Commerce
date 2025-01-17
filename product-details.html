@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product-Detail</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Reset and Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%; /* Ensures the full height of the viewport */
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+
+        main {
+            flex: 1; /* Allows the main content to take up available space */
+        }
+
+        /* Product Container */
+        .product-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .product-img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .product-details {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .product-price {
+            font-size: 20px;
+            color: green;
+            margin-top: 10px;
+        }
+
+        .back-btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .back-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer Styling */
+        .footer {
+            width: 100%;
+            background-color: #100e0e;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer-social a {
+            margin: 0 10px;
+        }
+
+        .footer-social img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            vertical-align: middle;
+        }
+
+        .footer-copyright {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header with responsive image and navigation -->
+    <header class="flex-header">
+        <img src="header.jpg" alt="Header Image" class="responsive">
+        <div class="logo">The Cozy Corner Furniture Store</div>
+        <div class="text-overlay">Fall Into Motion
+            <br>
+            <div class="hyperlink">Start Browsing</div>
+        </div>
+        <nav class="menu">
+            <ul class="menu-list">
+                <li class="menu-item"><a href="Home.html">Home</a></li>
+                <li class="menu-item"><a href="product-details.html">Product-Details</a></li>
+                <li class="menu-item"><a href="Product.html">Shop</a></li>
+                <li class="menu-item"><a href="Quality.html">Quality</a></li>
+                <li class="menu-item"><a href="Service.html">Services</a></li>
+                <li class="menu-item"><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="flex-main">
+        <article class="flex-article">
+            <!-- Product Description -->
+            <div class="product-container">
+                <img src="5.webp" alt="Product Image" class="product-img">
+                <div class="product-details">
+                    <div class="product-title">Luxury Sofa</div>
+                    <div class="product-description">
+                        This luxury sofa is crafted with premium materials, providing ultimate comfort and a stylish look to your living room. Perfect for relaxing with family and friends.
+                    </div>
+                    <div class="product-price">$1199.99</div>
+                </div>
+                <button class="back-btn" onclick="goBackToShopping()">Back to Shopping</button>
+            </div>
+
+            <script>
+                function goBackToShopping() {
+                    window.location.href = "Product.html"; // Replace with the actual link
+                }
+            </script>
+        </article>
+    </main>
+
+    <!-- Footer with social icons and copyright -->
+ 
+    <!-- Footer with social icons and copyright -->
+    <footer class="footer">
+        <div class="footer-social">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="insta.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com"">
+                <img src="linkedin.png" alt="linkedin">
+            </a>
+            <a href="https://www.youtube.com"">
+                <img src="yiutube.png" alt="Youtube">
+            </a>
+            <a href="mailto:dhaliwalraman06@outlook.com">
+                <img src="email.png" alt="Email">
+            </a>
+        </div>
+        <p class="footer-copyright">
+            Copyright© 2024 The Cozy Corner Furniture. All Rights Reserved.   
+
+Terms & Conditions
+
+Privacy Policy
+        </p>
+    </footer>
+</body>
+
+</html>

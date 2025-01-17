@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic styles */
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: lightgray;
+        }
+
+        /* Center the body content */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height of the viewport */
+            margin: 0;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Main container */
+        .flex-main {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Columns */
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center; /* Center text inside columns */
+            height: 30%;
+        }
+
+        /* Style for Rows */
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center; /* Center the row content */
+            align-items: center;
+            gap: 10px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 15px auto;
+            height: auto;
+        }
+
+        /* Style for Images in Rows */
+        .row img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Style for Text in Rows */
+        .text-content {
+            flex: 1;
+            padding-left: 15px;
+            text-align: left; /* Text aligned to the left */
+            line-height: 1.6;
+        }
+
+        /* Styling for headings */
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .footer {
+    width: 100%;
+    background-color: #100e0e; /* Or any color you'd like for the footer background */
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* Adjust padding as needed */
+    position: relative; /* Ensure it's positioned correctly */
+    bottom: 0;
+    left: 0;
+    margin: 0;
+}
+
+.footer-social a {
+    margin: 0 10px;
+}
+
+.footer-copyright {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+         </style>
+</head>
+
+<body>
+    <!-- Header with responsive image and navigation -->
+    <header class="flex-header">
+        <img src="header.jpg" alt="Header Image" class="responsive">
+        <div class="logo">The Cozy Corner Furniture Store</div>
+        <div class="text-overlay">Fall Into Motion
+            <br>
+            <div class="hyperlink"><a href="#">Start Browsing</a></div>
+        </div>
+        <nav class="menu">
+            <ul class="menu-list">
+                <li class="menu-item"><a href="Home.html">Home</a></li>
+                <li class="menu-item"><a href="product-details.html">Product-Details</a></li>
+                <li class="menu-item"><a href="Product.html">Shop</a></li>
+                <li class="menu-item"><a href="Quality.html">Quality</a></li>
+                <li class="menu-item"><a href="Service.html">Services</a></li>
+                <li class="menu-item"><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="flex-main">
+        <article class="flex-article">
+            <h1>Team Members</h1>
+
+            <!-- Column 1: Comfort -->
+            <div class="column">
+                <h2>Developer</h2>
+                <div class="row">
+                    <img src="Quality1.webp" alt="Comfort Image 1">
+                    <div class="text-content">
+                        Raman Dhaliwal<br>
+                        Email: dhaliwalraman06@gmail.com<br>
+                        Contact no: 647-972-7848
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: Curated Covers -->
+            <div class="column">
+                <h2>DevOps Engineer</h2>
+                <div class="row">
+                    <img src="Quality3.webp" alt="Curated Covers Image">
+                    <div class="text-content">
+                        Sukhdeep Singh<br>
+                        Email: singh-s1266@mail.nexus.uwinnipeg.ca<br>
+                        Contact no: 437-838-2800
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3: Project Manager -->
+            <div class="column">
+                <h2>Project Manager</h2>
+                <div class="row">
+                    <img src="Quality6.webp" alt="Project Manager Image">
+                    <div class="text-content">
+                        Emmanuel Oyenuga<br>
+                        oyenuga-e3@mail.nexus.uwinnipeg.ca<br>
+                        Contact no: 431-338-7862
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+     <!-- Footer with social icons and copyright -->
+     <footer class="footer">
+        <div class="footer-social">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="insta.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com"">
+                <img src="linkedin.png" alt="linkedin">
+            </a>
+            <a href="https://www.youtube.com"">
+                <img src="yiutube.png" alt="Youtube">
+            </a>
+            <a href="mailto:dhaliwalraman06@outlook.com">
+                <img src="email.png" alt="Email">
+            </a>
+        </div>
+        <p class="footer-copyright">
+            Copyright© 2024 The Cozy Corner Furniture. All Rights Reserved.   
+
+Terms & Conditions
+
+Privacy Policy
+        </p>
+    </footer>
+</body>
+
+</html>

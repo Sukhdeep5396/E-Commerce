@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: auto;
+            min-height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: lightgray;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Reduced gap between columns */
+            width: 100%;
+            margin: 0 auto;
+            height: 25%; /* Set height for column */
+        }
+
+        /* Style for Rows */
+        .row {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 10px; /* Reduced gap between images and text */
+            border: 1px solid #ddd;
+            padding: 15px; /* Reduced padding */
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 10px auto; /* Added margin to avoid excessive spacing */
+            height: 270px; /* Adjusted height for row */
+        }
+        /* Style for Images in Rows */
+        .row img {
+            width: 200px;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+       
+        /* Style for Text in Rows */
+.text-content {
+    flex: 1;
+    padding-left: 15px;
+    text-align: left; /* Align text to the left */
+    color: black; /* Ensure text is black */
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Header with responsive image and navigation -->
+    <header class="flex-header">
+        <img src="header.jpg" alt="Header Image" class="responsive">
+        <div class="logo">The Cozy Corner Furniture Store</div>
+        <div class="text-overlay">Fall Into Motion
+            <br>
+            <div class="hyperlink">Start Browsing</div>
+        </div>
+        <nav class="menu">
+            <ul class="menu-list">
+                <li class="menu-item"><a href="Home.html">Home</a></li>
+                <li class="menu-item"><a href="product-details.html">Product-Details</a></li>
+                <li class="menu-item"><a href="Product.html">Shop</a></li>
+                <li class="menu-item"><a href="Quality.html">Quality</a></li>
+                <li class="menu-item"><a href="Service.html">Services</a></li>
+                <li class="menu-item"><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="flex-main">
+        <article class="flex-article">
+            <h1>Services</h1>
+
+            <!-- Column 1: Comfort -->
+            <div class="column">
+                <h2>Custom Furniture Design </h2>
+                <div class="row">
+                    <img src="s1.webp" alt="Comfort Image 1">
+                    <img src="s2.jpg" alt="Comfort Image 2">
+                    <div class="text-content">
+                        <p style="text-align: left;">
+                            Personalized Choices: Create furniture that matches your unique style with our extensive selection of fabrics, leathers, wood finishes, and configurations.
+                         </p>
+                         <p style="text-align: left;">
+                            Expert Design Support: Our in-house design consultants guide you through the customization process, helping you craft pieces that reflect your vision and suit your space perfectly.
+                         </p>
+                         </div>
+                </div>
+            </div>
+
+            <!-- Column 2: Curated Covers -->
+            <div class="column">
+                <h2>Delivery and Assembly</h2>
+                <div class="row">
+                    <img src="s3.webp" alt="Curated Covers Image">
+                    <div class="text-content">
+                        <p style="text-align: left;">
+                            White-Glove Delivery: Enjoy hassle-free delivery directly to your home, complete with professional setup and placement of your furniture.
+                         </p>   
+                         <p style="text-align: left;">
+                            Flexible Scheduling: Choose a delivery time that fits your schedule.
+                        </p>   
+                        <p style="text-align: left;">
+                            Eco-Friendly Packaging Removal: We take care of all packaging waste, ensuring it is recycled or disposed of responsibly.
+                        </p>
+                        </div>
+                </div>
+            </div>
+
+            <!-- Column 3: People -->
+            <div class="column">
+                <h2>Warranty and Protection Plans</h2>
+                <div class="row">
+                    <img src="s4.webp" alt="People Image 1">
+                    <img src="s7.jpg" alt="People Image 2">
+                    <div class="text-content">
+                        <p style="text-align: left;">
+                            Comprehensive Coverage: Protect your investment with our extended warranty options covering materials, craftsmanship, and accidental damage.
+                        </p>
+                        <p style="text-align: left;">
+                            Repair Services: Our skilled technicians are available to address issues quickly and efficiently, ensuring your furniture remains in excellent condition for years.
+                        </p>
+                        </div>
+                </div>
+            </div>
+
+            <!-- Column 4: Efficiency -->
+            <div class="column">
+                <h2>In-Home Consultation</h2>
+                <div class="row">
+                    <img src="s9.webp" alt="Efficiency Image 1">
+                    <img src="Quality7.webp" alt="Efficiency Image 2">
+                    <div class="text-content">
+                        <p style="text-align: left;">
+                            Space Planning Assistance: Our design specialists can visit your home to help plan layouts and suggest furniture arrangements that maximize comfort and aesthetics.
+                            </p>
+                            <p style="text-align: left;">
+                            Color and Material Guidance: Receive expert advice on selecting the best colors, textures, and finishes to match your decor.
+                            </p>
+                        </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer with social icons and copyright -->
+    <footer class="footer">
+        <div class="footer-social">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="insta.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com"">
+                <img src="linkedin.png" alt="linkedin">
+            </a>
+            <a href="https://www.youtube.com"">
+                <img src="yiutube.png" alt="Youtube">
+            </a>
+            <a href="mailto:dhaliwalraman06@outlook.com">
+                <img src="email.png" alt="Email">
+            </a>
+        </div>
+        <p class="footer-copyright">
+            Copyright© 2024 The Cozy Corner Furniture. All Rights Reserved.   
+
+Terms & Conditions
+
+Privacy Policy
+        </p>
+    </footer>
+</body>
+
+</html>

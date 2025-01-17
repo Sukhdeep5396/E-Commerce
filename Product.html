@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhaliwal Furniture Store</title>
+    <link rel="stylesheet" href="activity.css">
+    <script>
+        // Cart array to store selected items
+        let cart = [];
+
+        // Function to add items to the cart
+        function addToCart(product, price, imgSrc) {
+            const item = { product, price, imgSrc, quantity: 1 };
+            const existingItemIndex = cart.findIndex(cartItem => cartItem.product === product);
+
+            if (existingItemIndex >= 0) {
+                cart[existingItemIndex].quantity += 1;
+            } else {
+                cart.push(item);
+            }
+
+            updateCartDisplay();
+            calculateTotal();
+        }
+
+        // Function to update cart display
+        function updateCartDisplay() {
+            const cartList = document.getElementById("cart-list");
+            cartList.innerHTML = ""; // Clear current cart display
+            cart.forEach(item => {
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `
+                    <img src="${item.imgSrc}" alt="${item.product}" style="width:100px; height:100px;">
+                    <span>${item.product} - $${item.price} </span>
+                    <button onclick="decreaseQuantity('${item.product}')">-</button>
+                    <span id="quantity-${item.product}">${item.quantity}</span>
+                    <button onclick="increaseQuantity('${item.product}')">+</button>
+                    <button onclick="removeFromCart('${item.product}')">Remove</button>
+                    <br>
+                `;
+                cartList.appendChild(listItem);
+            });
+        }
+
+        // Function to calculate and display total cost
+        function calculateTotal() {
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            document.getElementById("total-cost").textContent = `Total: $${total}`;
+        }
+
+        // Function to decrease quantity
+        function decreaseQuantity(product) {
+            const item = cart.find(cartItem => cartItem.product === product);
+            if (item && item.quantity > 1) {
+                item.quantity -= 1;
+                updateCartDisplay();
+                calculateTotal();
+            }
+        }
+
+        // Function to increase quantity
+        function increaseQuantity(product) {
+            const item = cart.find(cartItem => cartItem.product === product);
+            if (item) {
+                item.quantity += 1;
+                updateCartDisplay();
+                calculateTotal();
+            }
+        }
+
+        // Function to remove item from cart
+        function removeFromCart(product) {
+            const itemIndex = cart.findIndex(cartItem => cartItem.product === product);
+            if (itemIndex > -1) {
+                cart.splice(itemIndex, 1); // Remove item from the cart
+                updateCartDisplay(); // Update the cart display
+                calculateTotal(); // Update the total cost
+            }
+        }
+
+        // Function to handle purchase
+        function purchase() {
+            if (cart.length === 0) {
+                alert("Your cart is empty! Add some items to your cart before purchasing.");
+                return;
+            }
+
+            let purchaseDetails = "You have purchased:\n\n";
+            cart.forEach(item => {
+                purchaseDetails += `${item.quantity} x ${item.product} - $${item.price * item.quantity}\n`;
+            });
+
+            purchaseDetails += `\nTotal: $${cart.reduce((sum, item) => sum + (item.price * item.quantity), 0)}`;
+            alert(purchaseDetails);
+
+            // Optionally, clear the cart after purchase
+            cart = [];
+            updateCartDisplay();
+            calculateTotal();
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Header with responsive image and navigation -->
+    <header class="flex-header">
+        <img src="header.jpg" alt="Header Image" class="responsive">
+        <div class="logo">The Cozy Corner Furniture Store</div>
+        <div class="text-overlay">Fall Into Motion
+            <br>
+            <div class="hyperlink"> <a href="#">Start Browsing</a></div>
+        </div>
+        <nav class="menu">
+            <ul class="menu-list">
+                <li class="menu-item"><a href="Home.html">Home</a></li>
+                <li class="menu-item"><a href="product-details.html">Product-Details</a></li>
+                <li class="menu-item"><a href="Product.html">Shop</a></li>
+                <li class="menu-item"><a href="Quality.html">Quality</a></li>
+                <li class="menu-item"><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="flex-main">
+        <article class="flex-article">
+            <h1><center>Our Latest and Greatest</center></h1>
+            <p>You have great taste- express it with our new introductions.</p>
+            
+            <section>
+                <ul>
+                    <li>
+                        <a href="product-details.html?product=Reece%20Sectional&price=1200&img=5.webp">
+                            <img src="5.webp" alt="Reece Sectional" style="width:300px; height:300px;">
+                        </a>
+                        <br>Luxury Sofa - $1199.00
+                        <br>
+                        <button onclick="addToCart('Reece Sectional', 1200, '5.webp')">Add to Cart</button>
+                    </li>
+                    <li>
+                        <a href="product-details.html?product=Luna%20Sectional&price=1400&img=6.webp">
+                            <img src="6.webp" alt="Luna Sectional" style="width:300px; height:300px;">
+                        </a>
+                        <br>Luna Sectional - $1400
+                        <br>
+                        <button onclick="addToCart('Luna Sectional', 1400, '6.webp')">Add to Cart</button>
+                    </li>
+                    <li>
+                        <a href="product-details.html?product=Luna%20Sofa&price=900&img=7.webp">
+                            <img src="7.webp" alt="Luna Sofa" style="width:300px; height:300px;">
+                        </a>
+                        <br>Luna Sofa - $900
+                        <br>
+                        <button onclick="addToCart('Luna Sofa', 900, '7.webp')">Add to Cart</button>
+                    </li>
+                    <li>
+                        <a href="product-details.html?product=Lexi%20Accent%20Chair&price=500&img=8.webp">
+                            <img src="8.webp" alt="Lexi Accent Chair" style="width:300px; height:300px;">
+                        </a>
+                        <br>Lexi Accent Chair - $500
+                        <br>
+                        <button onclick="addToCart('Lexi Accent Chair', 500, '8.webp')">Add to Cart</button>
+                    </li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <section class="your-cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-list">
+            <!-- Cart items will be dynamically added here -->
+        </ul>
+        <p id="total-cost">Total: $0</p>
+        <button onclick="purchase()">Purchase</button>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-social">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="insta.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com"">
+                <img src="linkedin.png" alt="linkedin">
+            </a>
+            <a href="https://www.youtube.com"">
+                <img src="yiutube.png" alt="Youtube">
+            </a>
+            <a href="mailto:dhaliwalraman06@outlook.com">
+                <img src="email.png" alt="Email">
+            </a>
+        </div>
+        <p class="footer-copyright">
+            Copyright© 2024 The Cozy Corner Furniture. All Rights Reserved.   
+
+Terms & Conditions
+
+Privacy Policy
+        </p>
+    </footer>
+</body>
+</html>
