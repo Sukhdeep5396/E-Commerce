@@ -280,7 +280,7 @@ font-size: 3vw;
 
 .text-overlay1 {
 position: absolute;
-top: 170%;
+top: 210%;
 left:20%;
 transform: translate(-50%, -50%); /* Center text */
 color: white; /* Text color */
